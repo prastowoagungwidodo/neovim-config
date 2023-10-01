@@ -6,6 +6,7 @@ Plugin.dependencies = {
 	{'hrsh7th/cmp-path'},
 	{'saadparwaiz1/cmp_luasnip'},
 	{'hrsh7th/cmp-nvim-lsp'},
+	{'onsails/lspkind.nvim'},
 
 	-- Snippets
 	{'L3MON4D3/LuaSnip'},
@@ -39,6 +40,7 @@ function Plugin.config()
 
 	local cmp = require('cmp')
 	local luasnip = require('luasnip')
+	local lspkind = require('lspkind')
 
 	require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -63,19 +65,68 @@ function Plugin.config()
 			documentation = cmp.config.window.bordered(),
 		},
 		formatting = {
+			format = lspkind.cmp_format({
+				mode = 'symbol_text',
+				maxwidth = 50,
+				ellipsis_char = '…',
+				symbol_map = {
+					Namespace = "󰌗",
+					Text = "󰉿",
+					Method = "󰆧",
+					Function = "󰆧",
+					Constructor = "",
+					Field = "󰜢",
+					Variable = "󰀫",
+					Class = "󰠱",
+					Interface = "",
+					Module = "",
+					Property = "󰜢",
+					Unit = "󰑭",
+					Value = "󰎠",
+					Enum = "",
+					Keyword = "󰌋",
+					Snippet = "",
+					Color = "󰏘",
+					File = "󰈚",
+					Reference = "󰈇",
+					Folder = "󰉋",
+					EnumMember = "",
+					Constant = "󰏿",
+					Struct = "󰙅",
+					Event = "",
+					Operator = "󰆕",
+					TypeParameter = "󰊄",
+					Table = "",
+					Object = "󰅩",
+					Tag = "",
+					Array = "[]",
+					Boolean = "",
+					Number = "",
+					Null = "󰟢",
+					String = "󰉿",
+					Calendar = "",
+					Watch = "󰥔",
+					Package = "",
+					Copilot = "",
+					Codeium = "",
+					TabNine = "",
+				}
+			}),
+			--[[
 			fields = {'menu', 'abbr', 'kind'},
 			format = function(entry, item)
 				local menu_icon = {
 					copilot = '',
-					nvim_lsp = 'λ',
-					luasnip = '⋗',
-					buffer = 'Ω',
-					path = '🖫',
+					nvim_lsp = '',
+					luasnip = '󰅳',
+					buffer = '󱃖',
+					path = '',
 				}
 
 				item.menu = menu_icon[entry.source.name]
 				return item
 			end,
+			]]
 		},
 		-- See :help cmp-mapping
 		mapping = {

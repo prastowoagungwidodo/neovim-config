@@ -18,8 +18,9 @@ vim.opt.wrap = true
 vim.opt.breakindent = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.signcolumn = 'yes'
+vim.opt.colorcolumn = 80
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
