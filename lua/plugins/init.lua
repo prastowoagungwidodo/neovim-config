@@ -8,6 +8,7 @@ local Plugins = {
   {'xiyaowong/virtcolumn.nvim'},
 
 	-- Themes
+  {'nyoom-engineering/oxocarbon.nvim'},
 	{'EdenEast/nightfox.nvim'},
 	{'olimorris/onedarkpro.nvim' },
   { "catppuccin/nvim", name = "catppuccin" },

@@ -12,7 +12,8 @@ Plugin.opts = {
 --    component_separators = '|',
 --    section_separators = '',
     disabled_filetypes = {
-      statusline = {'NvimTree'}
+      statusline = {'NvimTree'},
+      winbar = {'barbecue'}
     }
   },
 }
