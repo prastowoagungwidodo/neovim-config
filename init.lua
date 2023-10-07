@@ -8,4 +8,4 @@ load('user.commands')
 load('user.keymaps')
 require('user.plugins')
 
-pcall(vim.cmd.colorscheme, 'onedark')
+pcall(vim.cmd.colorscheme, 'catppuccin')

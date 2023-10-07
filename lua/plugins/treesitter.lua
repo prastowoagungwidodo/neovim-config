@@ -1,13 +1,21 @@
 local Plugin = {'nvim-treesitter/nvim-treesitter'}
 
 Plugin.dependencies = {
-  {'nvim-treesitter/nvim-treesitter-textobjects'}
+  {'nvim-treesitter/nvim-treesitter-textobjects'},
+  {'windwp/nvim-ts-autotag'},
 }
 
 -- See :help nvim-treesitter-modules
 Plugin.opts = {
   highlight = {
     enable = true,
+  },
+  autotag = {
+    enable = true,
+    enable_rename = true,
+    enable_close = true,
+    enable_close_on_slash = true,
+    filetypes = { "html" , "xml" },
   },
   -- :help nvim-treesitter-textobjects-modules
   textobjects = {
@@ -30,7 +38,11 @@ Plugin.opts = {
     'vim',
     'vimdoc',
     'css',
-    'json'
+    'scss',
+    'json',
+    'html',
+    'xml',
+    'php',
   },
 }
 

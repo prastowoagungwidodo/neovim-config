@@ -20,10 +20,12 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
 vim.opt.signcolumn = 'yes'
-vim.opt.colorcolumn = 80
+vim.opt.colorcolumn = '80'
+vim.opt.laststatus = 3
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
+
 vim.api.nvim_set_keymap('', '<D-v>', '+p<CR>', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
@@ -32,3 +34,5 @@ vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true}
 vim.g.code_action_menu_show_details = false
 vim.g.code_action_menu_show_diff = false
 vim.g.code_action_menu_show_action_kind = false
+
+vim.g.virtcolumn_char = '│'
