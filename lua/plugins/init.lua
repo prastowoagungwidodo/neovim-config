@@ -5,17 +5,10 @@ local Plugins = {
 	{'kyazdani42/nvim-web-devicons', lazy = true},
 	{'numToStr/Comment.nvim', config = true, event = 'VeryLazy'},
   {'RRethy/vim-illuminate'},
-  {'xiyaowong/virtcolumn.nvim'},
-
+  { "lukas-reineke/virt-column.nvim", opts = { char = '│'} },
+  --{'xiyaowong/virtcolumn.nvim'},--
 	-- Themes
-  {'nyoom-engineering/oxocarbon.nvim'},
-	{'EdenEast/nightfox.nvim'},
-	{'olimorris/onedarkpro.nvim' },
-  { "catppuccin/nvim", name = "catppuccin" },
-	{'folke/tokyonight.nvim'},
-	{'joshdick/onedark.vim'},
-	{'tanvirtin/monokai.nvim'},
-	{'lunarvim/darkplus.nvim'},
+  {'nyoom-engineering/oxocarbon.nvim', lazy = false, priority = 1000},
 }
 
 return Plugins

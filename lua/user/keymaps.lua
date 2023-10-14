@@ -30,3 +30,11 @@ vim.keymap.set('n', '<leader>bq', '<cmd>bdelete<cr>')
 vim.keymap.set('n', '<leader>bl', '<cmd>buffer #<cr>')
 vim.keymap.set('n', '<leader>ca', '<cmd>CodeActionMenu<cr>')
 
+-- REST Nvim
+vim.api.nvim_create_autocmd('FileType', {
+	pattern = 'http',
+	group = vim.api.nvim_create_augroup('vim_rest', { clear = true }),
+	callback = function ()
+		vim.keymap.set('n', '<leader>r', '<Plug>RestNvim')
+	end,
+})

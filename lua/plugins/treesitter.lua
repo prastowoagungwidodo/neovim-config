@@ -43,6 +43,8 @@ Plugin.opts = {
     'html',
     'xml',
     'php',
+    'http',
+    'markdown',
   },
 }
 
