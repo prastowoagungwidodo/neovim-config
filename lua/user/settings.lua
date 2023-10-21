@@ -10,6 +10,8 @@ if vim.g.neovide then
   vim.keymap.set('i', '<D-v>', '<ESC>l"+Pli')
 end
 vim.opt.number = true
+--vim.opt.relativenumber = true
+--vim.opt.signcolumn = 'number'
 vim.opt.mouse = 'a'
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -25,6 +27,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.colorcolumn = '80'
 vim.opt.laststatus = 3
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.autoread = true
 
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
