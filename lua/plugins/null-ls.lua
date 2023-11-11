@@ -1,4 +1,4 @@
-local Plugin = {'jose-elias-alvarez/null-ls.nvim'}
+local Plugin = {'nvimtools/none-ls.nvim'}
 
 Plugin.dependencies = {
 	{ 'nvim-lua/plenary.nvim' },

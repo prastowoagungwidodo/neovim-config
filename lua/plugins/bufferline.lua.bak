@@ -1,0 +1,42 @@
+local Plugin = {'akinsho/bufferline.nvim'}
+
+Plugin.name = 'bufferline'
+Plugin.version = '*'
+
+Plugin.event = 'VeryLazy'
+
+Plugin.opts = {
+  options = {
+    mode = 'buffers',
+    offsets = {
+      {
+        filetype = "neo-tree",
+        text = "File Explorer",
+        highlight = "Directory",
+        text_align = "left",
+      },
+    },
+    diagnostics = 'nvim_lsp',
+    always_show_bufferline = false,
+    diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      local s = " "
+      for e, n in pairs(diagnostics_dict) do
+        local sym = e == "error" and " "
+        or (e == "warning" and " " or "" )
+        s = s .. n .. sym
+      end
+      return s
+    end,
+    themable = true,
+    separator_style = 'slant',
+  },
+  highlights = {
+    buffer_selected = {
+      italic = false,
+    },
+    indicator_selected = {
+      italic = false
+    }
+  }
+}
+return Plugin

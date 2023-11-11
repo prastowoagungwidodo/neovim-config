@@ -45,6 +45,7 @@ Plugin.opts = {
     'php',
     'http',
     'markdown',
+    'dart',
   },
 }
 

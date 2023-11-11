@@ -37,6 +37,8 @@ vim.api.nvim_set_keymap('!', '<D-v>', '<C-R>+', { noremap = true, silent = true}
 vim.api.nvim_set_keymap('t', '<D-v>', '<C-R>+', { noremap = true, silent = true})
 vim.api.nvim_set_keymap('v', '<D-v>', '<C-R>+', { noremap = true, silent = true})
 
+vim.api.nvim_set_hl(0, "BufferOffset", { bg = "#1d1c1f" })
+
 vim.g.code_action_menu_show_details = false
 vim.g.code_action_menu_show_diff = false
 vim.g.code_action_menu_show_action_kind = false

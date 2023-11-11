@@ -15,4 +15,3 @@ vim.api.nvim_create_autocmd('FileType', {
   group = group,
   command = 'nnoremap <buffer> q <cmd>quit<cr>'
 })
-
