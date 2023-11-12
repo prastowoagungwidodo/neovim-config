@@ -7,7 +7,10 @@ Plugin.keys = {'<C-g>'}
 -- See :help toggleterm-roadmap
 Plugin.opts = {
   open_mapping = '<C-g>',
-  direction = 'horizontal',
+  direction = 'float',
+  float_opts = {
+    border = 'curved',
+  },
   shade_terminals = true
 }
 

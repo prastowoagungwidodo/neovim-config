@@ -6,6 +6,7 @@ local Plugins = {
   {'numToStr/Comment.nvim', config = true, event = 'VeryLazy'},
   {'RRethy/vim-illuminate'},
   {'lukas-reineke/virt-column.nvim', opts = { char = '│'} },
+  {'j-hui/fidget.nvim', lazy = true},
   -- Themes
   {
     'nyoom-engineering/oxocarbon.nvim',
