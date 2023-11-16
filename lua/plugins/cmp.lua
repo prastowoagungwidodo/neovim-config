@@ -54,11 +54,11 @@ function Plugin.config()
 			end
 		},
 		sources = {
-			{name = 'nvim_lsp', group_index = 2},
 			{name = 'copilot', group_index = 2},
+			{name = 'nvim_lsp', group_index = 2},
+			{name = 'path', group_index = 2},
 			{name = 'luasnip', group_index = 2, keyword_length = 2},
 			{name = 'buffer', group_index = 2, keyword_length = 3},
-			{name = 'path', group_index = 2},
 		},
 		window = {
 			completion = cmp.config.window.bordered(),
